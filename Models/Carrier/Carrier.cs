@@ -14,14 +14,14 @@ namespace Peer2PeerDelivery.Models.Carrier
         public string Address { get; set; } = string.Empty;
         public string ProfilePicture { get; set; } = string.Empty;
         //peut avoir plusieurs docuemtns 
-        public ICollection<Document>? Documents { get; set; }
-        public ICollection<Review>? Reviews { get; set; }
+        public ICollection<Document>? Documents { get; set; } = new HashSet<Document>();
+        public ICollection<Review>? Reviews { get; set; } = new List<Review>();
         // chhal mn Item delivra 
-        public ICollection<Item>? Items { get; set; }
+        public ICollection<Item>? Items { get; set; } = new List<Item>();
         // chhal mn payements daze lih ca reste confidential 
-        public ICollection<Payment>? payments { get; set; }
+        public ICollection<Payment>? payments { get; set; } = new List<Payment>();
         // chhal aando mn trip 
-        public ICollection<Trip>? trips { get; set; }
+        public ICollection<Trip>? trips { get; set; } = new List<Trip>();
 
     }
 }
